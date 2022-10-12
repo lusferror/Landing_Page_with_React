@@ -1,25 +1,24 @@
+import propTypes from "prop-types";
 import React from "react";
-
+import child from "./navbar.jsx"
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
+import jumbo from "./jumbotron.jsx";
+import postcard from "./card.jsx";
 //create your first component
+let barajas = []
+for(let i=0;i<4; i++){
+	barajas.push(postcard)
+}
 const Home = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div>
+			{child}
+			{jumbo}
+			<div className="row m-1 d-flex justify-content-between">
+			{barajas}
+			</div>
 		</div>
+		
 	);
 };
 

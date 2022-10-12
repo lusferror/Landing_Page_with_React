@@ -9,4 +9,6 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
+let myDiv = document.querySelector("#app");
+myDiv.className="container-fluid p-0"
 ReactDOM.render(<Home />, document.querySelector("#app"));
